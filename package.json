@@ -1,0 +1,27 @@
+{
+   "name": "exercise",
+   "version": "1.0.0",
+   "description": "",
+   "default": "index.html",
+   "scripts": {
+      "start": "concurrently \"npm:watch-parcel\" \"npm:watch-tsc\"",
+      "build": "concurrently \"npm:build-parcel\" \"npm:watch-tsc\"",
+      "watch-parcel": "parcel index.html",
+      "watch-tsc": "tsc",
+      "build-parcel": "parcel build index.html --dist-dir ./dist",
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "devDependencies": {
+      "@babel/core": "^7.13.10",
+      "concurrently": "^6.0.0",
+      "parcel": "^2.0.0-beta.1",
+      "typescript": "^3.4.3",
+      "sass": "^1.32.8"
+   },
+   "author": "ndmt",
+   "license": "ISC",
+   "dependencies": {
+      "core-js": "^3.9.1",
+      "regenerator-runtime": "^0.13.7"
+   }
+}
